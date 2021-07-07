@@ -1,2 +1,2 @@
-module drillDSP/thief
+module github.com/drillDSP/adstruct
 
