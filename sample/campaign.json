@@ -1,0 +1,58 @@
+{
+  "_id": "5dbfa25f31256ad3cfc5c6d3",
+  "packageName": "id1478595751",
+  "campaignId": 322464671,
+  "advertiserId": 903,
+  "countryCode": [
+    "CN"
+  ],
+  "status": 1,
+  "campaignType": 1,
+  "publisherId": 0,
+  "source": 540,
+  "thirdParty": "Adjust",
+  "costType": 1,
+  "updated": 1577256868,
+  "tryNewTpl": {
+    "18846": {
+      "id": 18846,
+      "area": [
+        "US",
+        "CN"
+      ],
+      "rate": 5,
+      "stime": 1625083200,
+      "etime": 1626098600,
+      "status": 1,
+      "is_m": 2,
+      "is_dsp": 1,
+      "adx": [
+        "inneractive",
+        "mopub"
+      ],
+      "adType": [],
+      "dspAdType": [],
+      "tplSet": [
+        {
+          "groupId": 1,
+          "tplIds": [
+            1,
+            2,
+            3
+          ],
+          "rate": 5
+        },
+        {
+          "groupId": 1,
+          "tplIds": [
+            1,
+            2
+          ],
+          "rate": 45
+        }
+      ],
+      "mTime": 1625040920
+    }
+  },
+  "updatedDate": "2019-12-25 14:54:28"
+}

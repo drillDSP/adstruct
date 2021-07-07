@@ -1,0 +1,314 @@
+{
+  "id": "191",
+  "html_id": "191",
+  "feature_id": "191",
+  "template_desc": "DSP.iv.video+动态通用endcard",
+  "element_layer": {
+    "default": [
+      {
+        "name": "Icon",
+        "front_placeholder": "%%mv_icon%%",
+        "element_rule": [
+          {
+            "ft_type": "icon",
+            "sub_type": "icon"
+          }
+        ],
+        "element_resolution": [
+          {
+            "operator": "equal",
+            "resolution": {
+              "xunfei": [
+                "128x128"
+              ],
+              "kuaishou": [
+                "450x450"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "NumberRate",
+        "front_placeholder": "%%mv_number_rate%%",
+        "element_rule": [
+          {
+            "ft_type": "number_rate",
+            "sub_type": "number_rate"
+          }
+        ]
+      }
+    ],
+    "priority_video": [
+      {
+        "name": "Video_LD",
+        "priority": 3,
+        "element_rule": [
+          {
+            "ft_type": "video",
+            "sub_type": "video",
+            "filter_rule": {
+              "default": [
+                [
+                  {
+                    "attribute": "Clarity",
+                    "attribute_type": "cr",
+                    "operator": "equal",
+                    "values": [
+                      "3"
+                    ],
+                    "values_type": "cfg"
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "element_resolution": [
+          {
+            "operator": "ratio",
+            "size_source": [
+              "VideoSize"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Video_SD",
+        "priority": 1,
+        "element_rule": [
+          {
+            "ft_type": "video",
+            "sub_type": "video",
+            "filter_rule": {
+              "default": [
+                [
+                  {
+                    "attribute": "Clarity",
+                    "attribute_type": "cr",
+                    "operator": "equal",
+                    "values": [
+                      "2"
+                    ],
+                    "values_type": "cfg"
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Video_HD",
+        "priority": 2,
+        "element_rule": [
+          {
+            "ft_type": "video",
+            "sub_type": "video",
+            "filter_rule": {
+              "default": [
+                [
+                  {
+                    "attribute": "Clarity",
+                    "attribute_type": "cr",
+                    "operator": "equal",
+                    "values": [
+                      "1"
+                    ],
+                    "values_type": "cfg"
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "priority_title": [
+      {
+        "name": "ShortTitle",
+        "front_placeholder": "%%mv_short_title%%",
+        "priority": 1,
+        "element_rule": [
+          {
+            "ft_type": "short_title",
+            "sub_type": "short_title"
+          }
+        ]
+      },
+      {
+        "name": "AppName",
+        "front_placeholder": "%%mv_short_title%%",
+        "priority": 2,
+        "element_rule": [
+          {
+            "ft_type": "app_name",
+            "sub_type": "app_name"
+          }
+        ]
+      }
+    ],
+    "random_image": [
+      {
+        "name": "Image12006",
+        "front_placeholder": "%%mv_banner%%",
+        "element_rule": [
+          {
+            "ft_type": "image",
+            "sub_type": "image"
+          }
+        ],
+        "element_resolution": [
+          {
+            "operator": "equal",
+            "resolution": {
+              "default": [
+                "1200x627"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Image12007",
+        "front_placeholder": "%%mv_banner%%",
+        "element_rule": [
+          {
+            "ft_type": "image",
+            "sub_type": "image"
+          }
+        ],
+        "element_resolution": [
+          {
+            "operator": "equal",
+            "resolution": {
+              "default": [
+                "1920x1080"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "optional": [
+      {
+        "name": "CTA",
+        "front_placeholder": "%%mv_cta%%",
+        "optional": true,
+        "element_rule": [
+          {
+            "ft_type": "cta",
+            "sub_type": "cta"
+          }
+        ]
+      }
+    ]
+  },
+  "parent_id": [
+    "110"
+  ],
+  "api_framework": 2,
+  "click_area": [
+    2
+  ],
+  "template_type": 2,
+  "flow_direction": {
+    "adx": [
+      "mopub",
+      "mobfox",
+      "inneractive",
+      "inmobi",
+      "nexage",
+      "smaato",
+      "unity",
+      "xunfei"
+    ],
+    "adtype": [
+      "banner"
+    ],
+    "businesstype": [
+      "retarget_dsp",
+      "normal_dsp"
+    ],
+    "filter_rule": {
+      "default": [
+        [
+          {
+            "attribute": "BannerBType",
+            "attribute_type": "req",
+            "operator": "not_contains",
+            "values": [
+              "3"
+            ],
+            "values_type": "cfg"
+          },
+          {
+            "attribute": "BannerBAttr",
+            "attribute_type": "req",
+            "operator": "not_in",
+            "values": [
+              "6",
+              "7"
+            ],
+            "values_type": "cfg"
+          },
+          {
+            "attribute": "CompanionType",
+            "attribute_type": "req",
+            "operator": "contains",
+            "values": [
+              "2"
+            ],
+            "values_type": "cfg"
+          }
+        ]
+      ],
+      "unity": [
+        [
+          {
+            "attribute": "Os",
+            "attribute_type": "req",
+            "operator": "equal",
+            "values": [
+              "ios"
+            ],
+            "values_type": "cfg"
+          },
+          {
+            "attribute": "OsVersionCode",
+            "attribute_type": "req",
+            "operator": "wip",
+            "values": [
+              "10000000_"
+            ],
+            "values_type": "cfg"
+          }
+        ],
+        [
+          {
+            "attribute": "Os",
+            "attribute_type": "req",
+            "operator": "equal",
+            "values": [
+              "android"
+            ],
+            "values_type": "cfg"
+          }
+        ]
+      ],
+      "xunfei": [
+        [
+          {
+            "attribute": "TargetTemplate",
+            "attribute_type": "req",
+            "operator": "equal",
+            "values": [
+              "191"
+            ],
+            "values_type": "cfg"
+          }
+        ]
+      ]
+    }
+  }
+}
